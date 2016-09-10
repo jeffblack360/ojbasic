@@ -1,6 +1,6 @@
 # Oracle JET on OpenShift
 
-This git repository helps you get up and running quickly with Oracle JET on OpenShift. This repo combines the Oracle JET v2.1.0 Basic Quickstart template with OpenShift's Do-It-Yourself 0.1 Cartridge.
+This git repository helps you get up and running quickly with Oracle JET on OpenShift. This repo combines the Oracle JET v2.1.0 Basic Quickstart template with [https://hub.openshift.com/quickstarts/92-do-it-yourself-0-1](OpenShift's Do-It-Yourself 0.1 Cartridge).
 
 Oracle JET provides developers a modular JavaScript toolkit for building modern HTML5 applications coupled with a powerful PaaS running on OpenShift. OpenShift's Do-It-Yourself application template is a blank slate to build out your own applications and integrate the server technology of your choosing with a state-of-the-art JavaScript toolkit. The DIY server is a barebones Ruby server without any backend services.  Oracle JET is pre-configured and ready to go out-of-the-box. Introduce your own backend services via OpenShift's array of cartridges. Visit the [Oracle JET website](http://oraclejet.org) and the [OpenShift website](http://openshift.com) for all the details.
 
