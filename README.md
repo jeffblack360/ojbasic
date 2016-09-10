@@ -33,6 +33,9 @@ That's it, you can now checkout your application:
 http://ojbasicdiy-$yournamespace.rhcloud.com
 
 ## Resources
+
 See the [Oracle JET Developer Guide](http://docs.oracle.com/middleware/jet210/jet/) for complete installation details, including prerequisites.
+
 Oracle JET comes with a full [Developers Guide](http://docs.oracle.com/middleware/jet210/jet/) to help with Getting Started and many common issues.
+
 [OpenShift Website](https://www.openshift.com/)
