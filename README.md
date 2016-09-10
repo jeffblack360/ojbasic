@@ -1,50 +1,38 @@
-# Oracle JET version 2.1.0
+# Oracle JET on OpenShift
 
-## About Oracle JET
-Oracle JET is targeted at intermediate to advanced JavaScript developers working on client-side applications. It's a collection of open source JavaScript libraries along with a set of Oracle contributed JavaScript libraries that make it as simple and efficient as possible to build applications that consume and interact with Oracle products and services, especially Oracle Cloud services.
+This git repository helps you get up and running quickly with Oracle JET on OpenShift. This repo combines the Oracle JET v2.1.0 Basic Quickstart template with OpenShift's Do-It-Yourself 0.1 Cartridge.
 
-This is an open source project maintained by Oracle Corp.
+Oracle JET provides developers a modular JavaScript toolkit for building modern HTML5 applications coupled with a powerful PaaS running on OpenShift. OpenShift's Do-It-Yourself application template is a blank slate to build out your own applications and integrate the server technology of your choosing with a state-of-the-art JavaScript toolkit. The DIY server is a barebones Ruby server without any backend services.  Oracle JET is pre-configured and ready to go out-of-the-box. Introduce your own backend services via OpenShift's array of cartridges. Visit the [Oracle JET website](http://oraclejet.org) and the [OpenShift website](http://openshift.com) for all the details.
 
-### Features and Benefits:
-Oracle JET is a modular toolkit allowing developers to use as much or as little of the features as they desire. Watch a short overview of what Oracle JET can do for you.
+## Running on OpenShift
 
-* Complete JavaScript development toolkit 
-* Leverages popular open-source technologies
-* Full lifecycle management for template based SPA
-* Built in accessibility support
-* Support for internationalization (28 languages and 160+ locales)
-* Rich set of UI components
-* Advanced two-way binding with a common model layer
-* Powerful routing system supporting single-page application navigation
-* Smart resource management
-* For intermediate & advanced JS devs
+Create an account at [https://www.openshift.com/](https://www.openshift.com/)
 
-## Examples
-Here is a list of places to see Oracle JET in action:
-* [Oracle JET website](http://oraclejet.org)
-* [Oracle JET Cookbook](http://www.oracle.com/webfolder/technetwork/jet/uiComponents-formControls.html) - Every component with live code demos
-* [Sample applications and Tutorials](http://www.oracle.com/webfolder/technetwork/jet/globalExamples.html)
-
-
-## Installation
-Oracle JET provides a Yeoman generator to help scaffold up your applications.  To install and build a blank app, type:
+Create a DIY application 
 
 ```
-npm install -g yo grunt bower grunt-cli
-npm install -g generator-oraclejet
-
-yo oraclejet <app name>
+rhc app create ojbasicdiy diy-0.1
 ```
+
+Add this upstream Oracle JET Basic Quickstart repo
+
+```
+cd ojbasic
+git remote add upstream -m master git://github.com/jeffblack360/ojbasicdiy.git
+git pull -s recursive -X their upstream master
+```
+
+Then push the repo to OpenShift
+
+```
+git push
+```
+
+That's it, you can now checkout your application:
+
+http://ojbasicdiy-$yournamespace.rhcloud.com
+
 See the [Oracle JET Developer Guide](http://docs.oracle.com/middleware/jet210/jet/) for complete installation details, including prerequisites.
 
 ## [Documentation](http://docs.oracle.com/middleware/jet210/jet/)
 Oracle JET comes with a full [Developers Guide](http://docs.oracle.com/middleware/jet210/jet/) to help with Getting Started and many common issues.
-
-## [Contributing](https://github.com/oracle/oraclejet/tree/master/CONTRIBUTING.md)
-Oracle JET is an open source project. Pull Requests are currently not being accepted. See 
-[CONTRIBUTING](https://github.com/oracle/oraclejet/tree/master/CONTRIBUTING.md)
-for details.
-
-## [License](https://github.com/oracle/oraclejet/tree/master/LICENSE.md)
-Copyright (c) 2014, 2016 Oracle and/or its affiliates
-The Universal Permissive License (UPL), Version 1.0
